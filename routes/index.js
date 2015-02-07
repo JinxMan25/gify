@@ -19,6 +19,11 @@ router.post('/get_video', function(req, res, next){
     if (this.openedFiles.length == 0){
       return next(new Error ("You forgot the video!"));
     }
+    var tmp_loc = this.openedFiles[0].path;
+    var date = Date.now();
+    var file_name = this.openedFiles[0].name;
+    
+
   });
 });
 
