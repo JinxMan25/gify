@@ -19,11 +19,16 @@ router.post('/video', function(req, res, next){
       console.log(files);
   });
   form.on("end", function(fields, files){
+    if (this.openedFiles.length == 0){
+      return next(new Error ("You forgot the video!"));
+    }
     console.log(this.openedFiles);
-    var file = this.openedFiles[0].name;
+    var date = Date.now();
+    var video_file_loc = './static/temp/' + date + '-' + this.openedFiles[0].name;
+    var gif_name = this.openedFiles[0].name.replace(/\.\w+/g, "");
     var tmp_loc = this.openedFiles[0].path;
 
-    fs.copy(tmp_loc, './static/temp/' + file, function(err){
+    fs.copy(tmp_loc, video_file_loc,function(err){
       if (err){
         console.log(err);
       } else {
@@ -31,16 +36,11 @@ router.post('/video', function(req, res, next){
       }
     });
   });
-  res.json("copied");
+    var img_url = './static/images/' + date + '-' + gif_name;
 
   /*form.on("end", function(fields,files){
-    if (this.openedFiles.length == 0){
-      return next(new Error ("You forgot the video!"));
-    }
     var tmp_loc = this.openedFiles[0].path;
-    var date = Date.now();
     var file_name = this.openedFiles[0].name;
-    var img_url = 'static/images/' + date + '-' + file_name;
     
     child_process.exec('.././convert_to_gif.sh ../temp_videos/' + file_name + ' ' + res + ' ' + startTime + ' ' + remainingTime + ' ');
 
