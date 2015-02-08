@@ -3,6 +3,7 @@ var router = express.Router();
 var formidable = require('formidable');
 var child_process = require('child_process');
 var fs = require('fs-extra');
+var Q = require('q');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -27,7 +28,8 @@ router.post('/video', function(req, res, next){
     var gif_name = this.openedFiles[0].name.replace(/\.\w+/g, "");
     var tmp_loc = this.openedFiles[0].path;
     var img_url = './static/images/' + date + '-' + gif_name;
-    promiseCopy(tmp_loc, video_file_loc);
+    promiseCopy(tmp_loc, video_file_loc)
+
 
   });
 
@@ -45,10 +47,21 @@ router.post('/video', function(req, res, next){
 
 var promiseCopy = function(tmp, new_loc){
   fs.copy(tmp, new_loc,function(err){
+    var deferred = Q.defer();
     if (err){
       console.log(err);
     } else {
       console.log('Uploaded');
+      convert();
+    }
+  });
+}
+var convert = function(){
+  child_process.exec('ls', function(err, data){
+    if (err){
+      console.log(err);
+    } else {
+    console.log(data);
     }
   });
 }

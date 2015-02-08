@@ -1,85 +1,86 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '--save', 'uti' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '--save', 'Q' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink /usr/bin/node
-5 verbose readDependencies using package.json deps
-6 verbose cache add [ 'uti', null ]
-7 verbose cache add name=undefined spec="uti" args=["uti",null]
-8 verbose parsed url { protocol: null,
-8 verbose parsed url   slashes: null,
-8 verbose parsed url   auth: null,
-8 verbose parsed url   host: null,
-8 verbose parsed url   port: null,
-8 verbose parsed url   hostname: null,
-8 verbose parsed url   hash: null,
-8 verbose parsed url   search: null,
-8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: 'uti',
-8 verbose parsed url   path: 'uti',
-8 verbose parsed url   href: 'uti' }
-9 silly lockFile 7aa97343-uti uti
-10 verbose lock uti /home/sami/.npm/7aa97343-uti.lock
-11 silly lockFile 7aa97343-uti uti
-12 silly lockFile 7aa97343-uti uti
-13 verbose addNamed [ 'uti', '' ]
-14 verbose addNamed [ null, '*' ]
-15 silly lockFile 24d8359d-uti uti@
-16 verbose lock uti@ /home/sami/.npm/24d8359d-uti.lock
-17 silly addNameRange { name: 'uti', range: '*', hasData: false }
-18 verbose request where is /uti
-19 verbose request registry https://registry.npmjs.org/
-20 verbose request id 7881642071488338
-21 verbose url raw /uti
-22 verbose url resolving [ 'https://registry.npmjs.org/', './uti' ]
-23 verbose url resolved https://registry.npmjs.org/uti
-24 verbose request where is https://registry.npmjs.org/uti
-25 info trying registry request attempt 1 at 10:29:16
-26 http GET https://registry.npmjs.org/uti
-27 http 404 https://registry.npmjs.org/uti
-28 verbose headers { date: 'Sun, 08 Feb 2015 18:29:57 GMT',
-28 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-28 verbose headers   'content-type': 'application/json',
-28 verbose headers   'cache-control': 'max-age=0',
-28 verbose headers   'content-length': '52',
-28 verbose headers   'accept-ranges': 'bytes',
-28 verbose headers   via: '1.1 varnish',
-28 verbose headers   age: '0',
-28 verbose headers   'x-served-by': 'cache-atl6230-ATL',
-28 verbose headers   'x-cache': 'MISS',
-28 verbose headers   'x-cache-hits': '0',
-28 verbose headers   'x-timer': 'S1423420197.801481,VS0,VE76',
-28 verbose headers   'keep-alive': 'timeout=10, max=50',
-28 verbose headers   connection: 'Keep-Alive' }
-29 silly registry.get cb [ 404,
-29 silly registry.get   { date: 'Sun, 08 Feb 2015 18:29:57 GMT',
-29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-29 silly registry.get     'content-type': 'application/json',
-29 silly registry.get     'cache-control': 'max-age=0',
-29 silly registry.get     'content-length': '52',
-29 silly registry.get     'accept-ranges': 'bytes',
-29 silly registry.get     via: '1.1 varnish',
-29 silly registry.get     age: '0',
-29 silly registry.get     'x-served-by': 'cache-atl6230-ATL',
-29 silly registry.get     'x-cache': 'MISS',
-29 silly registry.get     'x-cache-hits': '0',
-29 silly registry.get     'x-timer': 'S1423420197.801481,VS0,VE76',
-29 silly registry.get     'keep-alive': 'timeout=10, max=50',
-29 silly registry.get     connection: 'Keep-Alive' } ]
-30 silly lockFile 24d8359d-uti uti@
-31 silly lockFile 24d8359d-uti uti@
-32 error 404 404 Not Found: uti
-32 error 404
-32 error 404 'uti' is not in the npm registry.
-32 error 404 You should bug the author to publish it
-32 error 404 It was specified as a dependency of 'gify'
-32 error 404
-32 error 404 Note that you can also install from a
-32 error 404 tarball, folder, or http url, or git url.
-33 error System Linux 3.13.0-29-generic
-34 error command "/usr/bin/node" "/usr/bin/npm" "install" "--save" "uti"
-35 error cwd /home/sami/gify
-36 error node -v v0.10.33
-37 error npm -v 1.4.28
-38 error code E404
-39 verbose exit [ 1, true ]
+5 warn package.json util@0.10.3 util is also the name of a node core module.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'Q', null ]
+8 verbose cache add name=undefined spec="Q" args=["Q",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'Q',
+9 verbose parsed url   path: 'Q',
+9 verbose parsed url   href: 'Q' }
+10 silly lockFile c3156e00-Q Q
+11 verbose lock Q /home/sami/.npm/c3156e00-Q.lock
+12 silly lockFile c3156e00-Q Q
+13 silly lockFile c3156e00-Q Q
+14 verbose addNamed [ 'Q', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 561e3931-Q Q@
+17 verbose lock Q@ /home/sami/.npm/561e3931-Q.lock
+18 silly addNameRange { name: 'Q', range: '*', hasData: false }
+19 verbose request where is /Q
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 8b39570cfbd74a32
+22 verbose url raw /Q
+23 verbose url resolving [ 'https://registry.npmjs.org/', './Q' ]
+24 verbose url resolved https://registry.npmjs.org/Q
+25 verbose request where is https://registry.npmjs.org/Q
+26 info trying registry request attempt 1 at 17:58:41
+27 http GET https://registry.npmjs.org/Q
+28 http 404 https://registry.npmjs.org/Q
+29 verbose headers { date: 'Mon, 09 Feb 2015 01:59:24 GMT',
+29 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=0',
+29 verbose headers   'content-length': '52',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   age: '0',
+29 verbose headers   'x-served-by': 'cache-jfk1022-JFK',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1423447164.380232,VS0,VE85',
+29 verbose headers   'keep-alive': 'timeout=10, max=50',
+29 verbose headers   connection: 'Keep-Alive' }
+30 silly registry.get cb [ 404,
+30 silly registry.get   { date: 'Mon, 09 Feb 2015 01:59:24 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '52',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     'x-served-by': 'cache-jfk1022-JFK',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1423447164.380232,VS0,VE85',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 silly lockFile 561e3931-Q Q@
+32 silly lockFile 561e3931-Q Q@
+33 error 404 404 Not Found: Q
+33 error 404
+33 error 404 'Q' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'gify'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Linux 3.13.0-29-generic
+35 error command "/usr/bin/node" "/usr/bin/npm" "install" "--save" "Q"
+36 error cwd /home/sami/gify
+37 error node -v v0.10.33
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]
