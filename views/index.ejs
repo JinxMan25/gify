@@ -7,8 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <form action="/get_video" method="POST">
-      <input type="file"/>
+    <form action="/video" enctype="multipart/form-data" method="post">
+      <input type="text" name="title" />
+      <input type="file" name="what" />
+      <input type="submit"/>
     </form>
   </body>
 </html>
