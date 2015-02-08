@@ -16,9 +16,7 @@ router.post('/video', function(req, res, next){
     if (err){
       return next(err);
     }
-    data['title'] = fields.title;
   });
-  console.log(data);
   form.on("end", function(fields, files){
     if (this.openedFiles.length == 0){
       return next(new Error ("You forgot the video!"));
@@ -29,14 +27,8 @@ router.post('/video', function(req, res, next){
     var gif_name = this.openedFiles[0].name.replace(/\.\w+/g, "");
     var tmp_loc = this.openedFiles[0].path;
     var img_url = './static/images/' + date + '-' + gif_name;
+    promiseCopy(tmp_loc, video_file_loc);
 
-    fs.copy(tmp_loc, video_file_loc,function(err){
-      if (err){
-        console.log(err);
-      } else {
-        console.log(file + ' was uploaded ');
-      }
-    });
   });
 
   /*form.on("end", function(fields,files){
@@ -51,8 +43,18 @@ router.post('/video', function(req, res, next){
   });*/
 });
 
+var promiseCopy = function(tmp, new_loc){
+  fs.copy(tmp, new_loc,function(err){
+    if (err){
+      console.log(err);
+    } else {
+      console.log('Uploaded');
+    }
+  });
+}
+
   router.get('/test', function(req,res,next){
-    child_process.exec('./test.sh', function(err, data){
+    child_process.exec('ls', function(err, data){
       console.log(err);
       console.log(data);
     });
