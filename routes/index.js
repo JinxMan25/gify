@@ -66,6 +66,12 @@ var convert = function(file, start, remaining, name){
       console.log(err);
     } else {
     console.log(data);
+    fs.unlink(file, function(err){
+      if (err){
+        return next(err);
+      }
+      console.log("Deleted " + name);
+  });
     }
   });
 }
