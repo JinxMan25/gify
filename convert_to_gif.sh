@@ -2,7 +2,7 @@
 
 
 file=".gif"
-output=$4$file
+output="./gifs/$4$file"
 filename=$1
 
 startTime=$2

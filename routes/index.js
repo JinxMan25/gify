@@ -34,19 +34,7 @@ router.post('/video', function(req, res, next){
     var img_url = './static/images/' + date + '-' + gif_name;
     promiseCopy(tmp_loc, video_file_loc, startTime, time, gif_name)
 
-
   });
-
-  /*form.on("end", function(fields,files){
-    var tmp_loc = this.openedFiles[0].path;
-    var file_name = this.openedFiles[0].name;
-    
-    child_process.exec('.././convert_to_gif.sh ../temp_videos/' + file_name + ' ' + res + ' ' + startTime + ' ' + remainingTime + ' ');
-
-    
-
-    date['img_url'] = img_url;
-  });*/
 });
 
 var promiseCopy = function(tmp, new_loc, beginning, length, name){
