@@ -17,6 +17,7 @@ router.post('/video', function(req, res, next){
     if (err){
       return next(err);
     }
+    console.log(files);
   });
   form.on("end", function(fields, files){
     if (this.openedFiles.length == 0){
@@ -53,13 +54,13 @@ var convert = function(file, start, remaining, name){
     if (err){
       console.log(err);
     } else {
-    console.log(data);
-    fs.unlink(file, function(err){
-      if (err){
-        return next(err);
-      }
-      console.log("Deleted " + name);
-  });
+      console.log(data);
+      fs.unlink(file, function(err){
+        if (err){
+          return next(err);
+        }
+        console.log("Deleted " + name);
+      });
     }
   });
 }
